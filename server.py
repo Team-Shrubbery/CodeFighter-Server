@@ -1,5 +1,5 @@
 # run this in the terminal to start server
-# >>>>>> gunicorn --threads 100 server:app
+# >>>>>> gunicorn --threads 50 server:app
 # ----------------------------------
 # the code about uses gunicorn to start the server
 # it uses 50 threads
@@ -21,14 +21,14 @@ def connect(sid, environ):
 # event listener
 @sio.event
 def move(sid, data):
-    print("GLOBAL NAMESPACE: ", data)
+    print("MOVE from client: ", data)
     sio.emit("move", data, room="game room", skip_sid=sid)
 
 
 # this is another way to listen
-@sio.on("message from client")
+@sio.event
 def message(sid, data):
-    print("GLOBAL message from client: ", data)
+    print("MESSAGE from client: ", data)
 
 
 # this is a built in listener given to us by socketio
