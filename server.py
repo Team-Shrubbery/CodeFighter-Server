@@ -1,5 +1,6 @@
 # run this in the terminal to start server
 # >>>>>> gunicorn --threads 50 server:app
+# gunicorn -k geventwebsocket.gunicorn.workers.GeventWebSocketWorker server: app
 # ----------------------------------
 # the code about uses gunicorn to start the server
 # it uses 50 threads
