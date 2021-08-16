@@ -1,14 +1,4 @@
-click==8.0.1
-Flask==2.0.1
-Flask-Sockets==0.2.1
-gevent==21.8.0
-gevent-websocket==0.10.1
-greenlet==1.1.1
-gunicorn==20.1.0
-itsdangerous==2.0.1
-Jinja2==3.0.1
-MarkupSafe==2.0.1
-redis==3.5.3
-Werkzeug==2.0.1
-zope.event==4.5.0
-zope.interface==5.4.0
+bidict @ file:///Users/DaveeSok/Library/Caches/pypoetry/artifacts/78/03/78/bf62e254e154ba9f4608af775f5fef5e9b315d4167ffb7e600c77aabe7/bidict-0.21.2-py2.py3-none-any.whl
+gunicorn @ file:///Users/DaveeSok/Library/Caches/pypoetry/artifacts/d4/22/ea/fb991f1fdb4e8ae8fd30e0bce3c23ece991aa75df3f5a4c4f4d5aba6ae/gunicorn-20.1.0-py3-none-any.whl
+python-engineio @ file:///Users/DaveeSok/Library/Caches/pypoetry/artifacts/14/32/7f/3edf671c718379ea64ff3e7fa3bc64ebc758c755e4036cad9e048fdbc5/python_engineio-4.2.1-py3-none-any.whl
+python-socketio @ file:///Users/DaveeSok/Library/Caches/pypoetry/artifacts/47/9a/3c/c93ef6c84a29f0694ca5e28dc41a1e0e1f93b63d945a3ef86033550afa/python_socketio-5.4.0-py3-none-any.whl
