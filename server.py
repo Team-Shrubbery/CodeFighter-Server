@@ -30,7 +30,8 @@ def connect(sid, environ):
 @sio.event
 def move(sid, data):
     print("MOVE from client: ", data)
-    sio.emit("receive", data, room="game room", skip_sid=sid)
+    if len(players) > 1:
+        sio.emit("receive", data, room="game room", skip_sid=sid)
 
 
 @sio.event
