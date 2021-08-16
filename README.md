@@ -10,4 +10,4 @@ Davee Sok, Prabin Singh, Kassie Bradshaw, Glen Clark, Michael Ryan
 
 ## Overview
 
-WSGI server with socketio functionality providing real-time bidirectional event-based communication to a multiplayer game.
+Gunicorn server with socketio functionality providing real-time bidirectional event-based communication to a multiplayer game.
