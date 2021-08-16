@@ -24,6 +24,9 @@ def connect(sid, environ):
     if len(players) == 1:
         sio.emit("position", "Player2", room=sid)
         print("We have a player2")
+    else:
+        sio.emit("full", "Server Full", room=sid)
+        print("This server is full")
 
     players.append(sid)
     sio.enter_room(sid, "game room")
