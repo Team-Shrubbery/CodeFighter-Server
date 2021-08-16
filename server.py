@@ -1,5 +1,6 @@
 # run this in the terminal to start server
 # >>>>>> gunicorn --threads 50 server:app
+# gunicorn -k eventlet -w 1 module:app
 # ----------------------------------
 # the code about uses gunicorn to start the server
 # it uses 50 threads
@@ -7,8 +8,12 @@
 import socketio
 
 
+# import eventlet
+
 sio = socketio.Server()
 app = socketio.WSGIApp(sio)
+
+# eventlet.wsgi.server(eventlet.listen(("", 8000)), app)
 
 
 players = []

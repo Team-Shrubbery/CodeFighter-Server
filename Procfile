@@ -1,1 +1,1 @@
-web: gunicorn --threads 50 server:app
+gunicorn -k eventlet -w 1 server:app
