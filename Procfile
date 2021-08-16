@@ -1,1 +1,1 @@
-web: gunicorn server:app
+web: gunicorn --threads 50 server:app
