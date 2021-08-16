@@ -1,5 +1,4 @@
 click==8.0.1
-example-pkg-Prabin544==0.0.1
 Flask==2.0.1
 Flask-Sockets==0.2.1
 gevent==21.8.0
