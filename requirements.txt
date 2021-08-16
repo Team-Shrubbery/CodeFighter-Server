@@ -1,14 +1,12 @@
-click==8.0.1
-Flask==2.0.1
-Flask-Sockets==0.2.1
-gevent==21.8.0
-gevent-websocket==0.10.1
-greenlet==1.1.1
-gunicorn==20.1.0
-itsdangerous==2.0.1
-Jinja2==3.0.1
-MarkupSafe==2.0.1
-redis==3.5.3
-Werkzeug==2.0.1
-zope.event==4.5.0
-zope.interface==5.4.0
+bidict==0.21.2; python_version >= "3.6" \
+    --hash=sha256:929d056e8d0d9b17ceda20ba5b24ac388e2a4d39802b87f9f4d3f45ecba070bf \
+    --hash=sha256:4fa46f7ff96dc244abfc437383d987404ae861df797e2fd5b190e233c302be09
+gunicorn==20.1.0; python_version >= "3.5" \
+    --hash=sha256:9dcc4547dbb1cb284accfb15ab5667a0e5d1881cc443e0677b4882a4067a807e \
+    --hash=sha256:e0a968b5ba15f8a328fdfd7ab1fcb5af4470c28aaf7e55df02a99bc13138e6e8
+python-engineio==4.2.1; python_version >= "3.6" \
+    --hash=sha256:d510329b6d8ed5662547862f58bc73659ae62defa66b66d745ba021de112fa62 \
+    --hash=sha256:f3ef9a2c048d08990f294c5f8991f6f162c3b12ecbd368baa0d90441de907d1c
+python-socketio==5.4.0; python_version >= "3.6" \
+    --hash=sha256:ca807c9e1f168e96dea412d64dd834fb47c470d27fd83da0504aa4b248ba2544 \
+    --hash=sha256:7ed57f6c024abdfeb9b25c74c0c00ffc18da47d903e8d72deecb87584370d1fc
