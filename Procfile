@@ -1,1 +1,1 @@
-web: gunicorn -w 1 --reload server:app
+worker: gunicorn -w 1 --reload server:app
