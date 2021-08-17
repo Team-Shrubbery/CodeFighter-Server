@@ -8,8 +8,15 @@
 import socketio
 
 
+from gevent import pywsgi
+from geventwebsocket.handler import WebSocketHandler
+
 sio = socketio.Server()
+# app = socketio.WSGIApp(sio)
+
+
 app = socketio.WSGIApp(sio)
+# pywsgi.WSGIServer(("", 8000), app, handler_class=WebSocketHandler).serve_forever()
 
 
 players = []
@@ -21,10 +28,10 @@ def connect(sid, environ):
     if len(players) == 0:
         sio.emit("position", "Player1", room=sid)
         print("We have a player1")
-    if len(players) == 1:
+    elif len(players) == 1:
         sio.emit("position", "Player2", room=sid)
         print("We have a player2")
-    else:
+    elif len(players) > 1:
         sio.emit("full", "Server Full", room=sid)
         print("This server is full")
 
