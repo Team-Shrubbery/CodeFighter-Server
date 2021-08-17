@@ -1,1 +1,1 @@
-web: gunicorn -k eventlet --threads 50 server:app
+web: gunicorn -k eventlet -w 1 --reload server:app
