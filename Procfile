@@ -1,1 +1,1 @@
-worker: uvicorn --reload async_server:app
+web: uvicorn --reload async_server:app
