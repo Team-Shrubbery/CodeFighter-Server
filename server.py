@@ -8,7 +8,7 @@
 import socketio
 
 
-# import eventlet
+import eventlet
 
 sio = socketio.Server()
 app = socketio.WSGIApp(sio)
