@@ -1,4 +1,4 @@
-# CodeFighter Server
+# CF Socket IO Server
 
 ## Authors
 
