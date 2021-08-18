@@ -23,10 +23,10 @@ players = []
 def connect(sid, environ):
     print("A New Player Connected: ", sid)
     if len(players) == 0:
-        sio.emit("position", "Player1", room=sid)
+        sio.emit("position", {"result": "Player 1"}, room=sid)
         print("We have a player1")
     if len(players) == 1:
-        sio.emit("position", "Player2", room=sid)
+        sio.emit("position", {"result": "Player 2"}, room=sid)
         print("We have a player2")
 
     players.append(sid)

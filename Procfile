@@ -1,1 +1,1 @@
-worker: uvicorn --reload async_server:app
+worker: gunicorn server:app

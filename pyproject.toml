@@ -9,7 +9,6 @@ python = "^3.9"
 python-socketio = "^5.4.0"
 gunicorn = "^20.1.0"
 eventlet = "^0.31.1"
-uvicorn = {extras = ["standard"], version = "^0.15.0"}
 
 [tool.poetry.dev-dependencies]
 
