@@ -9,6 +9,8 @@ Davee Sok, Prabin Singh, Kassie Bradshaw, Glen Clark, Michael Ryan
 - [Deployed URL](https://codefighter-server.herokuapp.com/)
 - [Code Fighter Game Repository](https://github.com/Team-Shrubbery/CodeFighter)
 - [Python Socket IO docs](https://python-socketio.readthedocs.io/en/latest/intro.html)
+- [Eventlet/Gunicorn Issues](https://github.com/eventlet/eventlet/issues/702)
+- [Miguel Grinberge Youtube](https://www.youtube.com/playlist?list=PLCuWRxjbgFnPZTBMYbz9UNGvTLNggRMjb)
 
 ## Overview
 
@@ -24,5 +26,5 @@ Gunicorn server with socketio functionality providing real-time bidirectional ev
 
 - Clone down this repo
 - Install dependencies
-- To start server, enter into command line:
+- To start server, enter into command line:  
   `gunicorn -k eventlet -w 1 --reload server:app`
