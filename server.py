@@ -1,10 +1,6 @@
 # run this in the terminal to start server
-# >>>>>> gunicorn --threads 50 server:app
+# gunicorn -k eventlet -w 1 --reload server:app
 # ----------------------------------
-# the code about uses gunicorn to start the server
-# it uses 50 threads
-# nameOfFile : the app variable
-import socketio
 
 
 sio = socketio.Server()
