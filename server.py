@@ -1,7 +1,7 @@
 # run this in the terminal to start server
 # gunicorn -k eventlet -w 1 --reload server:app
 # ----------------------------------
-
+import socketio
 
 sio = socketio.Server()
 app = socketio.WSGIApp(sio)
