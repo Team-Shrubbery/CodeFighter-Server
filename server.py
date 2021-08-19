@@ -1,19 +1,13 @@
-# run this in the terminal to start server
-# >>>>>> gunicorn --threads 50 server:app
+# eventlet version
 # gunicorn -k eventlet -w 1 --reload server:app
 # ----------------------------------
 # the code about uses gunicorn to start the server
-# it uses 50 threads
-# nameOfFile : the app variable
+
 import socketio
 
 
-# import eventlet
-
 sio = socketio.Server()
 app = socketio.WSGIApp(sio)
-
-# eventlet.wsgi.server(eventlet.listen(("", 8000)), app)
 
 
 players = []
@@ -23,11 +17,9 @@ players = []
 def connect(sid, environ):
     print("A New Player Connected: ", sid)
     if len(players) == 0:
-        sio.emit("position", {"result": "Player 1"}, room=sid)
-        print("We have a player1")
+        sio.emit("position", "Player1", room=sid)
     if len(players) == 1:
-        sio.emit("position", {"result": "Player 2"}, room=sid)
-        print("We have a player2")
+        sio.emit("position", "Player2", room=sid)
 
     players.append(sid)
     sio.enter_room(sid, "game room")
@@ -37,8 +29,7 @@ def connect(sid, environ):
 @sio.event
 def move(sid, data):
     print("MOVE from client: ", data)
-    if len(players) > 1:
-        sio.emit("receive", data, room="game room", skip_sid=sid)
+    sio.emit("receive", data, room="game room", skip_sid=sid)
 
 
 @sio.event
